@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Karaoke Lookup Song</title>
+  <script type="text/javascript" src="jquery-git.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+<script type="text/javascript">//<![CDATA[ 
+$(window).load(function(){
+$(function() {
+  $('#more-button').click(function () {
+  	var pos = $('#content').position();
+  	if(pos.left < 240){
+    	$('#top-header').animate({ left: '240px' }, 500);
+    	$('#content').animate({ left: '240px' }, 500);
+		$('#over-menu').animate({ left: '0' }, 500);
+	}
+	else{
+		$('#over-menu').animate({ left: '-240px' }, 400);
+     	$('#content').animate({ left: '0' }, 400);
+     	$('#top-header').animate({ left: '0' }, 400);
+
+	}
+  });
+
+});
+});//]]>  
+
+</script>
+
+</head>
+<body>
+  <div id="display">
+
+<div id="over-menu" style="left: -240px;">
+  <span id="close"></span>
+  <ul>
+    <li>Search</li>
+    <li>Look up</li>
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+  </ul>
+</div>
+
+<div id="content" style="left: 0px;">
+  <header>    
+    <div id="top-header">
+        <img id="more-button" src="images/three-lines-icon.png" alt="More">        
+    </div>
+  </header>
+    This is test1<p>Test<p>Test<p>    
+    This is test2<p>Test<p>Test<p>    
+    This is test3<p>Test<p>Test<p>
+    This is test4<p>Test<p>Test<p>    
+</div>
+</div>
+</body></html>
